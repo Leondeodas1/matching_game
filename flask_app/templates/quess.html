@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+    
+    <title>Match</title>
+    
+</head>
+<body>
+<button onclick="show()"> Show Element </button>
+
+    <div id="dip">
+        <p>{{hint[0]['theword']}}</p>
+    </div>
+    
+    <form action="/send" method="post" class="verification-container">
+        <h1 >Welcome to Match</h1>
+        <div>
+            
+        </div>
+        <div class="verification-code">
+            <input type="text" maxlength="1" autofocus name="first">
+            <input type="text" maxlength="1" name="second">
+            <input type="text" maxlength="1" name="third">
+            <input type="text" maxlength="1" name="fourth">
+            <input type="text" maxlength="1" name="five">
+
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+</body>
+</html>
